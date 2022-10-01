@@ -1,0 +1,31 @@
+# Plugin develloped by GFelberg
+# Config.yml
+
+# language: en
+# Thanks for downloading my plugin. For more plugins, dont forget to look my updates!
+# If you find any bugs or ideas to the plugin, pm me at spigot.
+
+# language: br/pt
+# Obrigado por baixar meu plugin. Para mais plugins, não esqueça de olhar as atualizações!
+# Se você encontrar algum problema ou ter alguma ideia para o plugin, pm no spigot.   	        
+
+# Permissions
+
+# suicide.suicide : Access to the Suicide Command
+# suicide.admin : Access to the Admin Help Page
+# suicide.reload : Access to Reload the Plugin
+
+# Configuration 1.0
+# This configuration will display Suicide Messages
+  
+Suicide:
+  Prefix: '&e[&bSuicide&e]&r'
+  Message: '&bRest in Peace my Friend'
+  
+# Configuration 1.1
+# This configuration will display the Help Page Messages
+
+Help:
+  Page: '&eShows this page'
+  Suicide: '&eKills yourself'
+  Reload: '&eReloads the Plugin'

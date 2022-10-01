@@ -1,0 +1,7 @@
+name: Suicide
+version: 1.0
+author: GFelberg
+main: me.GFelberg.Suicide.Main
+commands:
+  suicide:
+    usage: /<command>
