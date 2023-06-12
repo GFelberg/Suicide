@@ -15,10 +15,10 @@ public class Main extends JavaPlugin {
 		saveDefaultConfig();
 		SuicideUtils.loadVariables();
 		getCommand("suicide").setExecutor(new Suicide());
-		Bukkit.getConsoleSender().sendMessage("-----------------------------");
+		Bukkit.getConsoleSender().sendMessage("----------------------------");
 		Bukkit.getConsoleSender().sendMessage("Suicide Plugin Enabled");
-		Bukkit.getConsoleSender().sendMessage("Plugin develloped by GFelberg");
-		Bukkit.getConsoleSender().sendMessage("-----------------------------");
+		Bukkit.getConsoleSender().sendMessage("Plugin developed by GFelberg");
+		Bukkit.getConsoleSender().sendMessage("----------------------------");
 	}
 
 	public static Main getInstance() {
@@ -26,9 +26,9 @@ public class Main extends JavaPlugin {
 	}
 
 	public void onDisable() {
-		Bukkit.getConsoleSender().sendMessage("-----------------------------");
+		Bukkit.getConsoleSender().sendMessage("----------------------------");
 		Bukkit.getConsoleSender().sendMessage("Suicide Plugin Disabled");
-		Bukkit.getConsoleSender().sendMessage("Plugin develloped by GFelberg");
-		Bukkit.getConsoleSender().sendMessage("-----------------------------");
+		Bukkit.getConsoleSender().sendMessage("Plugin developed by GFelberg");
+		Bukkit.getConsoleSender().sendMessage("----------------------------");
 	}
 }

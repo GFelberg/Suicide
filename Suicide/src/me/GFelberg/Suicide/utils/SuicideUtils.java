@@ -8,14 +8,11 @@ import me.GFelberg.Suicide.Main;
 
 public class SuicideUtils {
 
-	public static String prefix, message, help_page, help_suicide, help_reload;
+	public static String prefix, message;
 
 	public static void loadVariables() {
-		prefix = Main.getInstance().getConfig().getString("Suicide.Prefix").replace("&", "ง");
-		message = Main.getInstance().getConfig().getString("Suicide.Message").replace("&", "ง");
-		help_page = Main.getInstance().getConfig().getString("Help.Page").replace("&", "ง");
-		help_suicide = Main.getInstance().getConfig().getString("Help.Suicide").replace("&", "ง");
-		help_reload = Main.getInstance().getConfig().getString("Help.Reload").replace("&", "ง");
+		prefix = Main.getInstance().getConfig().getString("Suicide.Prefix").replace("&", "ยง");
+		message = Main.getInstance().getConfig().getString("Suicide.Message").replace("&", "ยง");
 	}
 
 	public void reloadConfig(Player p) {
@@ -33,19 +30,20 @@ public class SuicideUtils {
 	}
 
 	public void helpPage(Player p) {
+		HelpPageUtils helpUtils = new HelpPageUtils();
 
 		if (!(p.hasPermission("suicide.admin"))) {
 			p.sendMessage(ChatColor.WHITE + "-----------------------------------------");
 			p.sendMessage(ChatColor.AQUA + "Suicide - Help Commands");
-			p.sendMessage(ChatColor.YELLOW + "/suicide help : " + help_page);
-			p.sendMessage(ChatColor.YELLOW + "/suicide : " + help_suicide);
+			p.sendMessage(ChatColor.YELLOW + "/suicide help : " + helpUtils.getHelp_page());
+			p.sendMessage(ChatColor.YELLOW + "/suicide : " + helpUtils.getHelp_suicide());
 			p.sendMessage(ChatColor.WHITE + "-----------------------------------------");
 		} else {
 			p.sendMessage(ChatColor.WHITE + "-----------------------------------------");
 			p.sendMessage(ChatColor.AQUA + "Suicide - Help Commands");
-			p.sendMessage(ChatColor.YELLOW + "/suicide help : " + help_page);
-			p.sendMessage(ChatColor.YELLOW + "/suicide : " + help_suicide);
-			p.sendMessage(ChatColor.YELLOW + "/suicide reload : " + help_reload);
+			p.sendMessage(ChatColor.YELLOW + "/suicide help : " + helpUtils.getHelp_page());
+			p.sendMessage(ChatColor.YELLOW + "/suicide : " + helpUtils.getHelp_suicide());
+			p.sendMessage(ChatColor.YELLOW + "/suicide reload : " + helpUtils.getHelp_reload());
 			p.sendMessage(ChatColor.WHITE + "-----------------------------------------");
 		}
 	}
